@@ -13,7 +13,7 @@ const PORT: string | undefined = config.PORT;
 
 app.use(cors());
 app.use("/api", (req, res) => {
-  res.send("Hello World");
+  res.send("Welcome to InvestHub");
 });
 
 app.use("/api", userRoute);

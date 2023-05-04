@@ -15,7 +15,7 @@ app.use(express_1.default.urlencoded({ extended: false }));
 const PORT = config_1.config.PORT;
 app.use(cors());
 app.use("/api", (req, res) => {
-    res.send("Hello World");
+    res.send("Welcome to InvestHub");
 });
 app.use("/api", userRoute_1.userRoute);
 app.use("/api", companyRoute_1.companyRoute);
