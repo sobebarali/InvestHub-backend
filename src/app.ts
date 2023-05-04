@@ -12,6 +12,10 @@ app.use(express.urlencoded({ extended: false }));
 const PORT: string | undefined = config.PORT;
 
 app.use(cors());
+app.use("/api", (req, res) => {
+  res.send("Hello World");
+});
+
 app.use("/api", userRoute);
 app.use("/api", companyRoute);
 

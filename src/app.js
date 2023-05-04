@@ -14,6 +14,9 @@ app.use(express_1.default.json());
 app.use(express_1.default.urlencoded({ extended: false }));
 const PORT = config_1.config.PORT;
 app.use(cors());
+app.use("/api", (req, res) => {
+    res.send("Hello World");
+});
 app.use("/api", userRoute_1.userRoute);
 app.use("/api", companyRoute_1.companyRoute);
 (0, database_1.default)().then(() => {
